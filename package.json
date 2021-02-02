@@ -1,6 +1,6 @@
 {
   "name": "json-to-js-const",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "JSON to JavaScript constant (tree-shakeable)",
   "type": "module",
   "exports": "./dist/main.js",
