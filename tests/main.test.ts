@@ -1,5 +1,6 @@
+/* eslint-disable import/extensions */
 import * as assert from 'assert';
-import convert from '..';
+import convert from '../dist/main.js';
 
 it('Main', () => {
   assert.strictEqual(
