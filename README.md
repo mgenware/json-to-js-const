@@ -5,7 +5,7 @@ JSON to JavaScript constant (tree-shakeable).
 ## Installation
 
 ```sh
-yarn add json-to-js-const
+npm add json-to-js-const
 ```
 
 ## Usage
