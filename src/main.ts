@@ -7,10 +7,17 @@ const defaultHeader = `/* eslint-disable */
 
 `;
 
-export default function convert(obj: Record<string, unknown>): string {
+function getTail(val: unknown, dts: boolean) {
+  if (dts && Array.isArray(val)) {
+    return `: ${typeof val[0]}[]`;
+  }
+  return ` = ${JSON.stringify(val)}`;
+}
+
+export default function convert(obj: Record<string, unknown>, dts?: boolean): string {
   let result = defaultHeader;
   for (const [key, val] of Object.entries(obj)) {
-    result += `export const ${key} = ${JSON.stringify(val)};\n`;
+    result += `export${dts ? ' declare' : ''} const ${key}${getTail(val, !!dts)};\n`;
   }
   return result;
 }
