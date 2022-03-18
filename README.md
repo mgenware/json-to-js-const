@@ -1,3 +1,7 @@
+# Deprecated
+
+Moved to https://github.com/mgenware/qing-shared-const
+
 # json-to-js-const
 
 JSON to JavaScript tree-shakeable constants.
